@@ -1,6 +1,6 @@
 {
   "name": "define-configurable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Defines new (or modifies existing) properties (using Object.defineProperty, setting `configurable: true` by default",
   "main": "lib/index.js",
   "scripts": {
