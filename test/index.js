@@ -62,7 +62,7 @@ test('define', (t) => {
 })
 
 test('define - extend', (t) => {
-  t.plan(3)
+  t.plan(4)
   var obj = {}
   define.call(obj, {
     method (number) {
@@ -107,6 +107,17 @@ test('define - extend', (t) => {
     }
   })
   t.equal(obj.render.state(100), 2000, 'nested extended "method"')
+
+  define.call(obj, {
+    extend: {
+      render: {
+        state (extend, number, extra) {
+          return extra
+        }
+      }
+    }
+  })
+  t.equal(obj.render.state(false, '!'), '!', 'extend can add extra arguments')
 })
 
 test('define - extend - base', (t) => {
