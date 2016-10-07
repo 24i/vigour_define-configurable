@@ -31,9 +31,16 @@
   "dependencies": {},
   "engines": {},
   "devDependencies": {
+    "browserify": "^13.0.1",
+    "bubleify": "^0.5.1",
     "istanbul": "^0.4.4",
     "standard": "^7.1.2",
     "tape": "^4.6.0",
     "vigour-base": "^3.6.0"
+  },
+  "browserify": {
+    "transform": [
+      "bubleify"
+    ]
   }
 }
