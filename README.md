@@ -7,7 +7,7 @@ Defines new (or modifies existing) properties (using [`Object.defineProperty`](h
 [![Coverage Status](https://coveralls.io/repos/github/vigour-io/define-configurable/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/define-configurable?branch=master)
 
 --
-**Usage**
+**Simple**
 
 ```javascript
 const define = require('vigour-util/define')
@@ -20,4 +20,22 @@ const props = [
   }
 ]
 define.apply(subject, props)
+```
+
+**Extend**
+
+```javascript
+const define = require('vigour-util/define')
+const subject = {
+  search (arg) {}
+}
+
+define.apply(subject, {
+  extend: {
+    // optmized method for extending up till 7 arguments
+    search (method, arg) {
+      return method.call(this, arg)
+    }
+  }
+})
 ```
