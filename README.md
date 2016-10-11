@@ -10,9 +10,9 @@ Defines new (or modifies existing) properties (using [`Object.defineProperty`](h
 **Usage**
 
 ```javascript
-var define = require('vigour-util/define')
-var subject = {}
-var props = [
+const define = require('vigour-util/define')
+const subject = {}
+const props = [
   { one: true },
   { two: function () {
       console.log('do nothing')
