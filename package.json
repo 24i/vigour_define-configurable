@@ -31,7 +31,6 @@
   "dependencies": {
     "bubleify": "^0.5.1"
   },
-  "engines": {},
   "devDependencies": {
     "istanbul": "^0.4.4",
     "standard": "^7.1.2",
