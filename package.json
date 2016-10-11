@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test node test | tap-difflet && vtest test | tap-difflet && standard",
     "cover": "istanbul cover --report none --print detail test/index.js",
     "view-cover": "istanbul report html && open ./coverage/index.html",
-    "watch": "nodemon test | tap-difflet",
+    "dev": "nodemon test | tap-difflet",
     "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0)"
   },
   "repository": {
@@ -28,11 +28,11 @@
     "Jim De Beer <jim@vigour.io>",
     "Shawn Inder <shawn@vigour.io>"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "bubleify": "^0.5.1"
+  },
   "engines": {},
   "devDependencies": {
-    "browserify": "^13.0.1",
-    "bubleify": "^0.5.1",
     "istanbul": "^0.4.4",
     "standard": "^7.1.2",
     "tape": "^4.6.0",
