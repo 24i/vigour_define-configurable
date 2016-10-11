@@ -4,7 +4,7 @@
   "description": "Defines new (or modifies existing) properties (using Object.defineProperty, setting `configurable: true` by default",
   "main": "lib/index.js",
   "scripts": {
-    "test": "NODE_ENV=test node test | tap-difflet && vtest test | tap-difflet && standard",
+    "test": "NODE_ENV=test node test | tap-difflet && standard",
     "cover": "istanbul cover --report none --print detail test/index.js",
     "view-cover": "istanbul report html && open ./coverage/index.html",
     "dev": "nodemon test | tap-difflet",
