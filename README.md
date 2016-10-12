@@ -10,7 +10,7 @@ Defines new (or modifies existing) properties (using [`Object.defineProperty`](h
 **Simple**
 
 ```javascript
-const define = require('vigour-util/define')
+const define = require('define-configurable')
 const subject = {}
 const props = [
   { one: true },
@@ -25,7 +25,7 @@ define.apply(subject, props)
 **Extend**
 
 ```javascript
-const define = require('vigour-util/define')
+const define = require('define-configurable')
 const subject = {
   search (arg) {}
 }
