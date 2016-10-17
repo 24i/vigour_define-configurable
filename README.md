@@ -1,5 +1,5 @@
 # define-configurable
-Defines new (or modifies existing) properties Object.defineProperty(https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)) on an object passed to define as this, setting configurable: true by default
+Defines new (or modifies existing) properties Object.defineProperty on an object passed to define as this, setting configurable: true by default
 
 [![Build Status](https://travis-ci.org/vigour-io/define-configurable.svg?branch=master)](https://travis-ci.org/vigour-io/define-configurable)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
