@@ -15,7 +15,7 @@ const define = require('define-configurable')
 const subject = {}
 const props = [
   { one: true },
-  { two: function () {
+  { two () {
       console.log('do nothing')
     }
   }
