@@ -40,7 +40,7 @@
     "standard": "^8.1.0",
     "tap-difflet": "0.6.0",
     "tape": "^4.4.0",
-    "vigour-base": "^3.6.0"
+    "brisky-base": "^4.0.0"
   },
   "browserify": {
     "transform": [
