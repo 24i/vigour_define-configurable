@@ -11,7 +11,7 @@ test('define', t => {
   var subject = {}
   var value = 'v'
   var fn = function () {}
-  var base = base()
+  var obj = base()
   var set = function (val) {
     t.equal(val, value, 'value is the same')
   }
@@ -25,7 +25,7 @@ test('define', t => {
       }
     },
     {
-      a: base,
+      a: obj,
       b: fn
     }
   ]
@@ -34,7 +34,7 @@ test('define', t => {
   equal('two', void 0)
   equal('three', { value: fn })
   equal('four', { get: fn, set: set })
-  equal('a', { value: base })
+  equal('a', { value: obj })
   equal('b', { value: fn })
   // Let's trigger the setter test
   subject.four = value
