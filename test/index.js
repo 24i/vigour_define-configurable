@@ -1,7 +1,8 @@
 'use strict'
 
 const test = require('tape')
-const Base = require('vigour-base')
+const base = require('brisky-base')
+const Base = require('brisky-base/base')
 const define = require('../')
 define.call(Base.prototype, { define: define })
 
@@ -10,7 +11,7 @@ test('define', t => {
   var subject = {}
   var value = 'v'
   var fn = function () {}
-  var base = new Base()
+  var base = base()
   var set = function (val) {
     t.equal(val, value, 'value is the same')
   }
@@ -121,7 +122,7 @@ test('define - extend', t => {
 })
 
 test('define - extend - base', t => {
-  const b = new Base()
+  const b = base()
   b.define({
     method () {
       // never return "arguments" its a v8 hazzard!
@@ -175,7 +176,7 @@ test('define - extend - base', t => {
 })
 
 function extendTest (amount, t) {
-  const b = new Base()
+  const b = base()
   const args = []
   for (let i = 0; i < amount; i++) {
     args.push('a' + i)
